@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('departamentos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 200);
-            $table->string('descricion', 200);
+            $table->string('descripcion', 200);
             $table->string('horario', 300);
             $table->foreignId('edificio_id')
                 ->constrained()
