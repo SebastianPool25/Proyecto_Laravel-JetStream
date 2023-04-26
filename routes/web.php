@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Livewire\BuscardorUsers;
+use App\Http\Livewire\Users;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+
+    Route::get('/users', Users::class)->name('users');
+    Route::get('/buscador', BuscardorUsers::class)->name('buscador');
+
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
