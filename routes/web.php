@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('entrada');
 });
+
+Route::get('/croquis', function () {
+    return view('croquis');
+})->name('croquis');
 
 Route::middleware([
     'auth:sanctum',
